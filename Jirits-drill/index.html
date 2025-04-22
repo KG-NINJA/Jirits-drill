@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#222">
+  <title>自立ドリル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>JIRITTSDRILL</h1>
+  </header>
+  <div style="text-align:center;margin:1em 0 0.5em 0;">
+    <button id="bgm-select-btn" class="main-btn" style="width:auto;display:inline-block;">音楽を選ぶ</button>
+    <input type="file" id="bgm-upload" accept="audio/*" style="display:none;">
+    <span id="bgm-filename" style="font-size:0.9em;color:#888;"></span>
+    <div style="margin-top:0.5em;">
+      <label for="bgm-volume">BGM音量：</label>
+      <input type="range" id="bgm-volume" min="0" max="100" value="100" style="vertical-align:middle;width:120px;">
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <h2>自律訓練法ガイド</h2>
+      <div style="text-align:center;margin-bottom:1em;">
+        <label for="lang-select">音声ガイド言語：</label>
+        <select id="lang-select">
+          <option value="ja-JP">日本語</option>
+          <option value="en-US">English</option>
+        </select>
+      </div>
+      <div style="text-align:center;margin-bottom:1em;">
+        <label for="voice-select">音声の種類：</label>
+        <select id="voice-select"></select>
+      </div>
+      <div id="guide-text" class="guide-text">これから自律訓練法を始めます。楽な姿勢で座ってください。</div>
+      <div class="controls">
+        <button id="start-btn" class="main-btn">スタート</button>
+        <button id="pause-btn" class="main-btn" disabled>一時停止</button>
+        <button id="resume-btn" class="main-btn" disabled>再開</button>
+        <button id="reset-btn" class="main-btn" disabled>リセット</button>
+      </div>
+      <div id="progress" class="progress"></div>
+    </div>
+  </main>
+  <footer>
+    <small>&copy; 2025 jirittsdrill</small>
+  </footer>
+  <div style="text-align:center;margin-bottom:0.5em;">
+    <button id="bgm-select-btn" class="main-btn" style="width:auto;display:inline-block;">音楽を選ぶ</button>
+    <input type="file" id="bgm-upload" accept="audio/*" style="display:none;">
+    <span id="bgm-filename" style="font-size:0.9em;color:#888;"></span>
+  </div>
+  <audio id="bgm-audio" src="bgm.mp3" preload="auto" loop></audio>
+  <script src="main.js"></script>
+</body>
+</html>
