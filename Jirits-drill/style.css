@@ -1,21 +1,22 @@
 html,body {
   margin: 0; padding: 0; box-sizing: border-box;
-  font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
-  background: #222; color: #fff;
+  font-family: 'Noto Sans JP', 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+  background: #f0f7ff; color: #333;
   min-height: 100vh;
 }
 header, footer {
   text-align: center;
   padding: 1em 0;
-  background: #333;
+  background: #ddeaff;
+  color: #333;
 }
 .container {
   max-width: 480px;
   margin: 2em auto;
-  background: #292929;
+  background: #fff;
   border-radius: 18px;
   padding: 2em 1em;
-  box-shadow: 0 2px 16px #000a;
+  box-shadow: 0 2px 16px #0001;
 }
 .guide-text {
   font-size: 1.3em;
@@ -32,7 +33,7 @@ header, footer {
 }
 .progress {
   text-align: center;
-  color: #4fc3f7;
+  color: #008ecc;
   font-size: 1.1em;
   min-height: 1.5em;
 }
@@ -41,24 +42,24 @@ header, footer {
   width: 100%;
   padding: 1em;
   font-size: 1.2em;
-  background: linear-gradient(90deg,#4fc3f7,#1976d2);
+  background: linear-gradient(90deg,#a3d5ff,#79c3ff);
   color: #fff;
   border: none;
   border-radius: 12px;
   margin-top: 2em;
-  box-shadow: 0 2px 8px #0005;
+  box-shadow: 0 2px 8px #0002;
   transition: background 0.2s,transform 0.1s;
 }
 .main-btn:active {
-  background: linear-gradient(90deg,#1976d2,#4fc3f7);
+  background: linear-gradient(90deg,#79c3ff,#a3d5ff);
   transform: scale(0.97);
 }
 @media (max-width: 600px) {
   .container { margin: 1em 0; border-radius: 0; }
   header, footer { font-size: 1em; }
 }
-@media (prefers-color-scheme: light) {
-  html,body { background: #f7f7f7; color: #222; }
-  .container { background: #fff; }
-  header, footer { background: #e0e0e0; color: #222; }
+@media (prefers-color-scheme: dark) {
+  html,body { background: #222; color: #fff; }
+  .container { background: #292929; }
+  header, footer { background: #333; color: #fff; }
 }
